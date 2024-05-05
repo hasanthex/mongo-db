@@ -7,7 +7,7 @@ require("./helpers/init_mongodb");
 /*
  * import route
 **/
-const CreateRoute = require("./Routes/create/create.routes");
+const InsertRoute = require("./Routes/create/create.routes");
 
 /*
  * init express
@@ -33,7 +33,7 @@ app.get("/", async(req, res, next) => {
 /*
  * init auth route to the express router
 **/
-app.use('/create', CreateRoute);
+app.use('/insert', InsertRoute);
 
 /*
  * set default not found error
